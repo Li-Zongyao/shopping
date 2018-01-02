@@ -15,8 +15,6 @@ public class ConnectMysql {
 			sql = con.createStatement();
 			DatabaseMetaData dbmd = con.getMetaData();
 			System.out.println("connect mysql success");
-			System.out.println(dbmd.getDatabaseProductName());
-			System.out.println(dbmd.getDriverName());
 
 		}
 		catch (Exception e) 
