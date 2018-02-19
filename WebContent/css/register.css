@@ -12,8 +12,8 @@ body{
 	
 #content{
     background-color: rgba(250, 255, 255, 0.95);
-    width: 420px;
-    height: 500px;
+    width: 620px;
+    height: auto;
     border: 1px solid #000000;
     border-radius: 6px;
     padding: 10px;
@@ -21,7 +21,31 @@ body{
     margin-left: auto;
     margin-right: auto;
     display: block;
+    text-align:center;
 }
+
+.button_altdiv2	{
+	margin-left: 500px;
+    margin-right: auto;
+}
+.button_alt_2 { 
+	color:rgb(255, 255, 255);
+font-size:14px;
+padding-top:10px;
+padding-bottom:10px;
+padding-left:25px;
+padding-right:25px;
+border-width:2px;
+border-color:rgb(145, 152, 227);
+border-style:solid;
+border-radius:0px;
+background-color:rgb(19, 179, 207);}
+.button_alt_2:hover{
+color:#ffffff;
+background-color:#78c300;
+border-color:#c5e591;
+}
+
 	
 .div_01{
 	margin: 20px auto;	

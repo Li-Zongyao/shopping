@@ -1,0 +1,176 @@
+@CHARSET "UTF-8";
+
+body{
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	margin: 0;
+	padding: 0;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-color: #CCC;
+	} 
+	
+#content{
+    background-color: rgba(250, 255, 255, 0.95);
+    width: 620px;
+    height: auto;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align:center;
+}
+
+.buyform{
+	margin: 20px auto;
+	
+	
+}
+
+
+.button_altdiv2	{
+	margin-left: 500px;
+    margin-right: auto;
+}
+.button_alt_2 { 
+	color:rgb(255, 255, 255);
+font-size:14px;
+padding-top:10px;
+padding-bottom:10px;
+padding-left:25px;
+padding-right:25px;
+border-width:2px;
+border-color:rgb(145, 152, 227);
+border-style:solid;
+border-radius:0px;
+background-color:rgb(19, 179, 207);}
+.button_alt_2:hover{
+color:#ffffff;
+background-color:#78c300;
+border-color:#c5e591;
+}
+
+
+#testButton { 
+	color:rgb(255, 255, 255);
+font-size:14px;
+padding-top:10px;
+padding-bottom:10px;
+padding-left:25px;
+padding-right:25px;
+border-width:2px;
+border-color:rgb(197, 229, 145);
+border-style:solid;
+border-radius:0px;
+background-color:rgb(194, 61, 0);
+}
+#testButton:hover{color:#ffffff;
+background-color:#78c300;
+border-color:#c5e591;}
+
+.title{
+	
+	font: 30px arial;
+}
+
+table {
+    background-color: #FFF;
+    border: none;
+    color: #565;
+    font: 12px arial;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table caption {
+    font-size: 24px;
+    border-bottom: 2px solid #B3DE94;
+    border-top: 2px solid #B3DE94;
+}
+
+table, td, th {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    text-align:left;
+}
+
+tbody td, tbody th {
+    background-color: #DFC;
+    border-bottom: 2px solid #B3DE94;
+    border-top: 3px solid #FFFFFF;
+    padding: 9px;
+}
+
+
+tfoot td, tfoot th {
+    font-weight: bold;
+    padding: 4px 8px 6px 9px;
+    text-align:center;
+}
+
+thead th {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 19px;
+    padding: 0 8px 2px;
+    text-align:center;
+}
+
+tbody tr.odd th,tbody tr.odd td { /*odd就是偶数行*/
+    background-color: #CEA;
+    border-bottom: 2px solid #67BD2A;
+}
+
+td+td+td, /*第三个td以及之后的td元素*/
+col.price{ /*类样式*/
+    text-align:right;
+}
+
+tbody tr:hover td, tbody tr:hover th { /*tr也有hover样式*/
+    background-color: #8b7;
+    color:#fff;
+}
+
+select{
+	margin:5px 20px;
+	
+	
+	
+	
+}
+
+
+.login-input-box{
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+.login-input-box input{
+    width: 340px;
+    height: 32px;
+    margin-left: 18px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding-left: 42px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

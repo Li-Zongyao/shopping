@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+    <!--注册-->
   <servlet>
     <servlet-name>Register</servlet-name>
     <servlet-class>com.RegisterServlet</servlet-class>
@@ -8,6 +9,7 @@
     <servlet-name>Register</servlet-name>
     <url-pattern>/Register</url-pattern>
   </servlet-mapping>
+    <!--登录-->
   <servlet>
     <servlet-name>login</servlet-name>
     <servlet-class>com.LoginSevlet</servlet-class>
@@ -16,4 +18,68 @@
     <servlet-name>login</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
+   <!--查询商品--> 
+    <servlet>
+    <servlet-name>selectgoods</servlet-name>
+    <servlet-class>com.SelectgoodsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>selectgoods</servlet-name>
+    <url-pattern>/selectgoods</url-pattern>
+  </servlet-mapping>
+   <!--查询商品 管理员-->   
+    <servlet>
+    <servlet-name>selectgoodsadmin</servlet-name>
+    <servlet-class>com.SelectgoodsadminServlet</servlet-class>
+  </servlet>
+   
+  <servlet-mapping>
+    <servlet-name>selectgoodsadmin</servlet-name>
+    <url-pattern>/selectgoodsadmin</url-pattern>
+  </servlet-mapping>
+  <!--删除商品-->
+      <servlet>
+    <servlet-name>delgoodsadmin</servlet-name>
+    <servlet-class>com.DelGoodsAdminservlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>delgoodsadmin</servlet-name>
+    <url-pattern>/delgoods</url-pattern>
+  </servlet-mapping>
+  
+    <!--更改商品-->
+      <servlet>
+    <servlet-name>chGoodsAdminservlet</servlet-name>
+    <servlet-class>com.ChangeGoodsAdminservlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>chGoodsAdminservlet</servlet-name>
+    <url-pattern>/changegoods</url-pattern>
+  </servlet-mapping>
+  
+      <!--购买商品-->
+      <servlet>
+    <servlet-name>BuyGoods</servlet-name>
+    <servlet-class>com.BuyGoodsSevlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>BuyGoods</servlet-name>
+    <url-pattern>/BuyGoods</url-pattern>
+  </servlet-mapping>
+
+        <!--查找购买表-->
+    <servlet>
+    <servlet-name>Selectgoods</servlet-name>
+    <servlet-class>com.BuyformSevlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Selectgoods</servlet-name>
+    <url-pattern>/selectgoodsbuyform </url-pattern>
+  </servlet-mapping>
+  
+
 </web-app>

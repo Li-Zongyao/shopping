@@ -62,7 +62,6 @@ public class RegisterServlet extends HttpServlet {
 			{
 				mySql.closeCon();
 				out.println("<script>alert('register success');history.go(-1)</script>"); 
-				
 			}
 			else{
 				out.println("<script>alert('register error');history.go(-1)</script>"); 
@@ -80,7 +79,9 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.setCharacterEncoding("utf-8");
 		doGet(request, response);
+		response.setCharacterEncoding("utf-8");
 	}
 
 }

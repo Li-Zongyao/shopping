@@ -10,6 +10,9 @@
 <body >
 
 <div id="content" >
+    	<div class="button_altdiv2"> 
+       <input type="button" name="btnAdd" onclick="javascript:window.location.href='login'" value="退&nbsp;出" class="button_alt_2"/>
+       </div>
 
 		<div>
 		<img src="D:/Java WorkShop/shopping/WebContent/image/2.jpg" height="160" width="414"/>

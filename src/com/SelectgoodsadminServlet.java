@@ -21,13 +21,13 @@ import com.connect.ConnectMysql;
 /**
  * Servlet implementation class SelectgoodsServlet
  */
-public class SelectgoodsServlet extends HttpServlet {
+public class SelectgoodsadminServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SelectgoodsServlet() {
+    public SelectgoodsadminServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -76,7 +76,7 @@ public class SelectgoodsServlet extends HttpServlet {
 	            	System.out.print("goods_name: "+(String) goods1.getGoods_name()+"  "); 
 	            
 	            request.setAttribute("goodsList", goodslist);  
-	            request.getRequestDispatcher("user.jsp").forward(request, response);  
+	            request.getRequestDispatcher("admin.jsp").forward(request, response);  
 	            
 		} catch (Exception e) {
 			// TODO: handle exception

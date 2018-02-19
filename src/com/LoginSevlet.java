@@ -50,7 +50,7 @@ public class LoginSevlet extends HttpServlet {
 	     Customer_bean userlogin = new Customer_bean() ;
 		 String user_id =  request.getParameter("user_id");
 	     String password =  request.getParameter("password");
-	     System.out.println("user_id"+user_id+" password:"+password);
+	     System.out.println("user_id: "+user_id+"  password:"+password);
 	     if(user_id!=null && password!=null && user_id.equals(" ")==false && password.equals(" ")==false ){
 	    	 
 	    	 try {
@@ -60,7 +60,7 @@ public class LoginSevlet extends HttpServlet {
 	    	 
 	    	 	while(rs.next()){  															
 	    	 		userlogin = new Customer_bean(rs.getString("user_id"),rs.getString("name"),
-	    	 				rs.getString("password"),Integer.parseInt(rs.getString("lv")));
+	    	 		rs.getString("password"),Integer.parseInt(rs.getString("lv")));
 	    	 	}
 	    	 	System.out.println("ResultSet sql:"+rs);
 	    	 	if (userlogin != null) {

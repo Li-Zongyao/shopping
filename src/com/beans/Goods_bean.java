@@ -2,7 +2,7 @@ package com.beans;
 
 public class Goods_bean {
 	protected String goods_name;
-	protected float name;
+	protected float prices;
 	protected int stock;
 	public String getGoods_name() {
 		return goods_name;
@@ -10,11 +10,11 @@ public class Goods_bean {
 	public void setGoods_name(String goods_name) {
 		this.goods_name = goods_name;
 	}
-	public float getName() {
-		return name;
+	public float getPrices() {
+		return prices;
 	}
-	public void setName(float name) {
-		this.name = name;
+	public void setPrices(float prices) {
+		this.prices = prices;
 	}
 	public int getStock() {
 		return stock;
@@ -24,13 +24,13 @@ public class Goods_bean {
 	}
 	/**
 	 * @param goods_name
-	 * @param name
+	 * @param prices
 	 * @param stock
 	 */
-	public Goods_bean(String goods_name, float name, int stock) {
+	public Goods_bean(String goods_name, float prices, int stock) {
 		super();
 		this.goods_name = goods_name;
-		this.name = name;
+		this.prices = prices;
 		this.stock = stock;
 	}
 	/**
@@ -39,6 +39,5 @@ public class Goods_bean {
 	public Goods_bean() {
 		super();
 	}
-	
-	
+
 }

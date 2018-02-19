@@ -13,21 +13,22 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
+import com.beans.Buy_bean;
 import com.beans.Goods_bean;
 import com.connect.ConnectMysql;
 
 /**
- * Servlet implementation class SelectgoodsServlet
+ * Servlet implementation class BuyformSevlet
  */
-public class SelectgoodsServlet extends HttpServlet {
+@WebServlet("/BuyformSevlet")
+public class BuyformSevlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SelectgoodsServlet() {
+    public BuyformSevlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -53,30 +54,30 @@ public class SelectgoodsServlet extends HttpServlet {
 		ConnectMysql conn = null;
 
 		try {
-			 List<Goods_bean> goodslist = new ArrayList<Goods_bean>(); 
-			 //request.setAttribute("goodslist", goodslist);
+			 List<Buy_bean> buylist = new ArrayList<Buy_bean>(); 
+			
 			 conn = new ConnectMysql();
 			 
 	         conn.getCon("jdbc:mysql://127.0.0.1:3366/test");
-	         String select_sql = "select * from goods";  
+	         String select_sql = "select * from buy";  
 	         rs = conn.select(select_sql);
 	     	 System.out.println("ResultSet sql:"+rs);
 	          
 	            while(rs.next()){  
-	                String goods_name = rs.getString("goods_name");  
-	                float prices = rs.getFloat("price");
-	                int stock = rs.getInt("stock");
+	                String date = rs.getString("date");  
+	                String goods_name = rs.getString("goods_name"); 
+	                int number = rs.getInt("number");
 	                
-	                Goods_bean goods_bean = new Goods_bean(goods_name,prices,stock); //新建bean实例
+	                Buy_bean buy_bean = new Buy_bean(date,goods_name,number); //新建bean实例
 	                
-	                goodslist.add(goods_bean);  
+	                buylist.add(buy_bean);  
 	            }  
 	            
-	            for(Goods_bean  goods1 :  goodslist ) 
-	            	System.out.print("goods_name: "+(String) goods1.getGoods_name()+"  "); 
+	            for(Buy_bean  buy1 :  buylist ) 
+	            	System.out.print("buy goods_name: "+(String) buy1.getGoods_name()+"  "); 
 	            
-	            request.setAttribute("goodsList", goodslist);  
-	            request.getRequestDispatcher("user.jsp").forward(request, response);  
+	            request.setAttribute("buylist", buylist);  
+	            request.getRequestDispatcher("admin_shopping.jsp").forward(request, response);  
 	            
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -96,7 +97,6 @@ public class SelectgoodsServlet extends HttpServlet {
 			
 		}
 		
-		
 	}
 
 	/**
@@ -107,7 +107,6 @@ public class SelectgoodsServlet extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		doGet(request, response);
 		response.setCharacterEncoding("utf-8");
-		
 	}
 
 }

@@ -56,6 +56,18 @@ public class ConnectMysql {
 		}
 		return result;
 	}
+	PreparedStatement pre;
+	public synchronized PreparedStatement prepareStatement(String SQLSel)
+	{
+		try {
+			pre = con.prepareStatement(SQLSel);
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return pre;
+	}
+	
 	
 
 }
